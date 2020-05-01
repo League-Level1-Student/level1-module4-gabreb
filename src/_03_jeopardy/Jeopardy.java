@@ -54,25 +54,28 @@ frame.setVisible(true);
 		// 2. Give your frame a title
 frame.setTitle("Jeopardy");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
-JPanel panel = createHeader("Math");
-quizPanel.add(createHeader("Math"));
+JPanel panel = createHeader("Mathematics");
+quizPanel.add(createHeader("Mathematics"));
 		// 4. Add the header component to the quizPanel
 
 		// 5. Add the quizPanel to the frame
 frame.add(quizPanel);
 		// 6. Use the createButton method to set the value of firstButton
 		// 7. Add the firstButton to the quizPanel
-
+firstButton = createButton("200");
+quizPanel.add(firstButton);
 		// 8. Write the code to complete the createButton() method below. Check that your
 		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
-
+secondButton = createButton("400");
+quizPanel.add(secondButton);
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
 
 		// 10. Add the secondButton to the quizPanel
 
 		// 11. Add action listeners to the buttons (2 lines of code)
-
+firstButton.addActionListener(this);
+secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
 
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
@@ -95,7 +98,7 @@ frame.add(quizPanel);
 		// Create a new JButton
 JButton button = new JButton();
 		// Set the text of the button to the dollarAmount
-button.setText("$ " + 200);
+button.setText("$ " + dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
 buttonCount += 1;
 		// Return your new button instead of the temporary button
@@ -109,9 +112,10 @@ buttonCount += 1;
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-
+if (buttonPressed==firstButton) {
 			// Call the askQuestion() method
- 
+ askQuestion();
+}
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
@@ -125,7 +129,7 @@ buttonCount += 1;
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 		
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
-		
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
 		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
 		
