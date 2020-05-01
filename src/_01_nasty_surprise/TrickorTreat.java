@@ -33,9 +33,11 @@ public class TrickorTreat implements ActionListener {
 		JButton buttonPressed = (JButton) arg0.getSource();
 if (buttonPressed==button) {
 	showPictureFromTheInternet("https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.imgflip.com%2Fams2j.jpg&imgrefurl=https%3A%2F%2Fimgflip.com%2Fmemetemplate%2F17858971%2FEvil-Puppy&tbnid=6zZmttGfOotnlM&vet=12ahUKEwjupu-ql5HpAhVFBDQIHR6zCJwQMygAegUIARDkAQ..i&docid=e3lSy1wcDHx40M&w=254&h=198&q=evil%20puppy&safe=strict&client=safari&ved=2ahUKEwjupu-ql5HpAhVFBDQIHR6zCJwQMygAegUIARDkAQ");
+	frame.pack();
 }
 else if (buttonPressed==button2) {
 	showPictureFromTheInternet("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.thelabradorsite.com%2Fwp-content%2Fuploads%2F2019%2F03%2FCute-puppy-Names-Over-200-Adorable-Ideas-LS-long.jpg&imgrefurl=https%3A%2F%2Fwww.thelabradorsite.com%2Fcute-puppy-names%2F&tbnid=nVWN3jZwTuBpGM&vet=12ahUKEwi8i6ynl5HpAhVZAjQIHdClA2gQMygAegUIARCmAg..i&docid=asclfktjFLoRYM&w=1200&h=650&q=cute%20puppy&safe=strict&client=safari&ved=2ahUKEwi8i6ynl5HpAhVZAjQIHdClA2gQMygAegUIARCmAg");
+	frame.pack();
 }
 		
 	}
