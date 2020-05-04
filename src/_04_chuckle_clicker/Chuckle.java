@@ -14,10 +14,11 @@ public class Chuckle implements ActionListener {
 	static JButton jokeButton = new JButton();
 	static JButton punchline = new  JButton();
 public static void main(String[] args) {
-	makeButtons();
+	Chuckle chuckle = new Chuckle();
+	chuckle.makeButtons();
 }
 
-public static void makeButtons() {
+public void makeButtons() {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
 	frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
@@ -25,8 +26,8 @@ public static void makeButtons() {
 	frame.add(panel);
 	jokeButton.setText("joke");
 	punchline.setText("punchline");
-	jokeButton.addActionListener(null);
-	punchline.addActionListener(null);
+	jokeButton.addActionListener(this);
+	punchline.addActionListener(this);
 	panel.add(jokeButton);
 	panel.add(punchline);
 	frame.pack();
