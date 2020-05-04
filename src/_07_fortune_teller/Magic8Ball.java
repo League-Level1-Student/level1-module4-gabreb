@@ -32,7 +32,7 @@ else if (randy==2) {
 	JOptionPane.showMessageDialog(null, "Maybe you should ask google");
 }
 else if (randy==3) {
-	JOptionPane.showMessageDialog(null, "Stop trying to hide it. We all know you have a crush on your best friend!");
+	JOptionPane.showMessageDialog(null, "Stop trying to hide it. We all know you have a crush on your girlfriend's best friend!");
 }
 	// -- tell the user "Yes"
 
