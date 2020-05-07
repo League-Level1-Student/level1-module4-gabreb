@@ -17,17 +17,15 @@ public class whacky implements ActionListener {
 	JPanel panel = new JPanel();
 	int times = 0;
 	int timeM = 0;
-	int random = new Random().nextInt(24);
 	Date timeAtStart = new Date();
 	void run() {
-		System.out.println(times);
-		System.out.println(timeM);
 frame.setVisible(true);
 frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 frame.add(panel);
 frame.setSize(359,230);
 frame.setTitle("Whack a mole for fame and glory!");
-
+int random = new Random().nextInt(24);
+System.out.println(random);
 drawButton(random);
 	}
 	void drawButton(int random) {
@@ -36,6 +34,7 @@ drawButton(random);
 			panel.add(button);
 			button.addActionListener(this);
 			if (i==random) {
+				System.out.println(random);
 				button.setText("mole!");
 			}
 		
@@ -72,9 +71,8 @@ drawButton(random);
 				System.exit(0);
 			}
 		}
-		frame.dispose();
+		frame.remove(panel);
 		run();
-		
 		
 	}
 	void speak(String words) { 
